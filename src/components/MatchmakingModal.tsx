@@ -59,13 +59,22 @@ const MatchmakingModal: React.FC<MatchmakingModalProps> = ({ gameId, onClose, on
 
         if (!user || !mode || !currency) return;
 
+        // Simple Region Detection
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        let region = 'Global';
+        if (timeZone.startsWith('Europe')) region = 'Europe';
+        else if (timeZone.startsWith('America')) region = 'North America';
+        else if (timeZone.startsWith('Asia')) region = 'Asia';
+        else if (timeZone.startsWith('Africa')) region = 'Africa';
+
         try {
             const { data, error } = await supabase.rpc('join_queue', {
                 p_user_id: user.telegram_id,
                 p_game_type: gameId,
                 p_mode: mode,
                 p_currency: currency,
-                p_bet_amount: selectedBet
+                p_bet_amount: selectedBet,
+                p_region: region
             });
 
             if (error) throw error;
