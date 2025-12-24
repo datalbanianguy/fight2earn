@@ -1,0 +1,111 @@
+.container {
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #333;
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    font-family: monospace;
+}
+
+.captainZone {
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.input {
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+    font-size: 2rem;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+.warning {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.codeDisplay {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 2rem;
+    font-family: monospace;
+    letter-spacing: 5px;
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.codeDisplay button {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.uploadZone {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.fileInput {
+    margin-top: 10px;
+}
+
+.editContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.editBtn {
+    background: none;
+    border: 1px solid #555;
+    color: #ccc;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reportBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.success strong {
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}

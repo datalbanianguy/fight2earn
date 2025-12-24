@@ -1,0 +1,157 @@
+.faucetWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.captchaContainer {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.captchaContainer:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.checkbox.verified {
+    border-color: #00ff9d;
+    background: #00ff9d;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.checkMark {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.captchaText {
+    font-size: 0.9rem;
+    color: #ccc;
+    user-select: none;
+}
+
+.mathChallengeModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.mathBox {
+    background: #2a2a2a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-width: 280px;
+}
+
+.mathBox h3 {
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
+.mathInput {
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    width: 80px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.verifyBtn {
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.verifyBtn:active {
+    transform: scale(0.95);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Update container to just wrapper */
+.container {
+    display: none;
+    /* Deprecated, using faucetWrapper */
+}
+
+.button {
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover:not(:disabled) {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+.disabled {
+    background: #333;
+    color: #888;
+    box-shadow: none;
+    cursor: not-allowed;
+    background-image: none;
+}

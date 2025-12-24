@@ -1,0 +1,508 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.matchInfo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.badge.active {
+    color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+.teamsGrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.vs {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0 20px;
+}
+
+.playerCard {
+    background: #333;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.lobbyCodeSection {
+    background: linear-gradient(135deg, #2a2a2a, #222);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid #444;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Green Confirmation UI */
+.codeConfirmed {
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 15px;
+    animation: pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.codeConfirmed h3 {
+    color: #00ff9d;
+    margin: 10px 0;
+}
+
+/* Timer */
+.timer {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.timerValue {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    font-family: monospace;
+}
+
+.timeout {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+/* Code Input */
+.codeInput {
+    background: #333;
+    border: 2px solid #555;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: monospace;
+    letter-spacing: 3px;
+    margin-right: 10px;
+}
+
+.codeInput:focus {
+    border-color: #00ff9d;
+    outline: none;
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s;
+}
+
+.submitBtn:active {
+    transform: scale(0.95);
+}
+
+.codeDisplay {
+    font-size: 1.2rem;
+}
+
+.code {
+    font-family: monospace;
+    font-weight: bold;
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.copyBtn {
+    background: #333;
+    border: 1px solid #555;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.captainControls {
+    width: 100%;
+}
+
+.captainControls h3 {
+    color: #ffd700;
+}
+
+.captainControls input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #333;
+    color: white;
+    margin-right: 10px;
+}
+
+.captainControls button {
+    padding: 10px 20px;
+    background: #00ff9d;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.waiting {
+    color: #888;
+    font-style: italic;
+}
+
+/* Chat Section */
+.chatSection {
+    background: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.chatHeader {
+    padding: 15px;
+    background: #1a1a1a;
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
+
+.chatBox {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg {
+    padding: 8px 12px;
+    background: #333;
+    border-radius: 8px;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.msg.me {
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    align-self: flex-end;
+}
+
+.msg.system {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    font-style: italic;
+    max-width: 100%;
+    align-self: center;
+}
+
+.sender {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.chatInput {
+    padding: 15px;
+    background: #1a1a1a;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #333;
+}
+
+.chatInput input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #333;
+    color: white;
+}
+
+.chatInput button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ffd700;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.backBtn {
+    margin-top: 20px;
+    background: none;
+    border: 1px solid #444;
+    color: #888;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.matchInfo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.badge.active {
+    color: #ffd700;
+    border: 1px solid #ffd700;
+}
+
+.teamsGrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.vs {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0 20px;
+}
+
+.playerCard {
+    background: #333;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.lobbyCodeSection {
+    background: linear-gradient(135deg, #2a2a2a, #222);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.codeDisplay {
+    font-size: 1.2rem;
+}
+
+.code {
+    font-family: monospace;
+    font-weight: bold;
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.captainControls input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #333;
+    color: white;
+    margin-right: 10px;
+}
+
+.captainControls button {
+    padding: 10px 20px;
+    background: #00ff9d;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.waiting {
+    color: #888;
+    font-style: italic;
+}
+
+.chatSection {
+    background: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.chatBox {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg {
+    padding: 8px 12px;
+    background: #333;
+    border-radius: 8px;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.msg.me {
+    background: #0056b3;
+    align-self: flex-end;
+}
+
+.sender {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.chatInput {
+    padding: 15px;
+    background: #1a1a1a;
+    display: flex;
+    gap: 10px;
+}
+
+.chatInput input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #333;
+    color: white;
+}
+
+.chatInput button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ffd700;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.backBtn {
+    margin-top: 20px;
+    background: none;
+    border: 1px solid #444;
+    color: #888;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}

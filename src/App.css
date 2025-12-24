@@ -1,0 +1,114 @@
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.user-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.username {
+  color: #fff;
+  font-weight: bold;
+}
+
+.balance-info {
+  text-align: right;
+}
+
+.balance-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.balance-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.value {
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.text-green {
+  color: var(--accent-color);
+}
+
+.text-gold {
+  color: var(--primary-color);
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+  padding: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-header {
+  height: 80px;
+  background: #333;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.skeleton-grid {
+  height: 300px;
+  background: #333;
+  border-radius: 16px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.deposit-btn {
+  background: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.deposit-btn:hover {
+  opacity: 0.9;
+}

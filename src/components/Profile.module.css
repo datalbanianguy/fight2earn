@@ -1,0 +1,93 @@
+.container {
+    padding: 20px;
+    background: #1a1a1a;
+    min-height: 100vh;
+    color: white;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+}
+
+.id {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.statCard {
+    background: #252525;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.inviteSection {
+    background: #252525;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.codeBox {
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    border: 1px dashed #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.codeBox:active {
+    background: #000;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.9rem;
+}

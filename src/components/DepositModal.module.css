@@ -1,0 +1,184 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal {
+    background: #111;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    min-height: 400px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.tokenBtn {
+    background: #222;
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.tokenBtn:active {
+    transform: scale(0.95);
+    background: #333;
+}
+
+.tokenBtn span {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.tokenBtn small {
+    color: #666;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #888;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.header {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.header h4 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.price {
+    color: #00ff9d;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+.qr {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.addressBox {
+    text-align: left;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.addressBox label {
+    color: #888;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.addressDisplay {
+    display: flex;
+    gap: 10px;
+}
+
+.addressDisplay input {
+    background: #000;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.addressDisplay button {
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.warning {
+    color: #ffaa00;
+    display: block;
+    margin-top: 5px;
+    font-size: 0.7rem;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff9d;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
