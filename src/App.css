@@ -25,9 +25,9 @@
 }
 
 .logo-container {
-  width: 60px;
-  /* Adjust size as needed */
-  height: 60px;
+  width: 80px;
+  /* Increased size for better visibility */
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--accent-color);
