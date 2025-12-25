@@ -65,8 +65,9 @@
 }
 
 .loading-logo-container {
-  width: 100px;
-  height: 100px;
+  width: 350px;
+  /* Requested 350px */
+  height: 350px;
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
