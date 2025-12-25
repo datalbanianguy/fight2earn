@@ -21,50 +21,54 @@ const Dashboard: React.FC = () => {
                     <div className="logo-container">
                         <img src="/fight-coin-logo.jpg" alt="Logo" className="dashboard-logo" />
                     </div>
-                    <div className="user-info">
-                        <h1>FightCoin Arena</h1>
-                        <p>Welcome, <span className="username">{user?.username || 'Fighter'}</span></p>
-                    </div>
                 </div>
+
+                <div className="user-info centered-title">
+                    <h1>FightCoin Arena</h1>
+                    <p>Welcome, <span className="username">{user?.username || 'Fighter'}</span></p>
+                </div>
+
                 <div className="balance-info">
                     <div className="balance-item">
                         <span className="label">USDT</span>
                         <span className="value text-green">${user?.balance_usdt?.toFixed(2) || '0.00'}</span>
                     </div>
-                    <div className="balance-item">
-                        <span className="label">FC</span>
-                        <span className="value text-gold">{user?.balance_fc?.toFixed(4) || '0.0000'}</span>
-                    </div>
-                    <button className="deposit-btn" onClick={() => setShowDeposit(true)}>+ Deposit</button>
+                    <span className="value text-green">${user?.balance_usdt?.toFixed(2) || '0.00'}</span>
                 </div>
-            </header>
-
-            <main>
-                <Faucet />
-
-                <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginTop: '20px' }}>
-                    <button className="nav-btn" onClick={() => window.location.href = '/profile'} style={{
-                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-                    }}>
-                        👤 Profile
-                    </button>
-                    <button className="nav-btn" onClick={() => window.location.href = '/friends'} style={{
-                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-                    }}>
-                        👥 Friends
-                    </button>
-                    <button className="nav-btn" onClick={() => window.location.href = '/support'} style={{
-                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-                    }}>
-                        📩 Support
-                    </button>
+                <div className="balance-item">
+                    <span className="label">FC</span>
+                    <span className="value text-gold">{user?.balance_fc?.toFixed(4) || '0.0000'}</span>
                 </div>
-
-                <GameSelector />
-            </main>
-
-            {showDeposit && <DepositModal onClose={() => setShowDeposit(false)} />}
+                <button className="deposit-btn" onClick={() => setShowDeposit(true)}>+ Deposit</button>
         </div>
+            </header >
+
+    <main>
+        <Faucet />
+
+        <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginTop: '20px' }}>
+            <button className="nav-btn" onClick={() => window.location.href = '/profile'} style={{
+                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+            }}>
+                👤 Profile
+            </button>
+            <button className="nav-btn" onClick={() => window.location.href = '/friends'} style={{
+                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+            }}>
+                👥 Friends
+            </button>
+            <button className="nav-btn" onClick={() => window.location.href = '/support'} style={{
+                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+            }}>
+                📩 Support
+            </button>
+        </div>
+
+        <GameSelector />
+    </main>
+
+{ showDeposit && <DepositModal onClose={() => setShowDeposit(false)} /> }
+        </div >
     );
 };
 
