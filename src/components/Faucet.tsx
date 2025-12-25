@@ -50,7 +50,10 @@ const Faucet: React.FC = () => {
             const remaining = oneHour - diff;
             const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
-            return `${minutes}m ${seconds}s`;
+            // Format as MM:SS
+            const paddedMinutes = minutes.toString().padStart(2, '0');
+            const paddedSeconds = seconds.toString().padStart(2, '0');
+            return `${paddedMinutes}:${paddedSeconds}`;
         }
         return null;
     };
@@ -130,7 +133,7 @@ const Faucet: React.FC = () => {
                 disabled={!!timeLeft || loading}
                 whileTap={!timeLeft ? { scale: 0.95 } : {}}
             >
-                {loading ? 'Processing...' : (timeLeft ? `Cooldown: ${timeLeft}` : '🎁 Claim 1.00 FC')}
+                {loading ? 'Processing...' : (timeLeft ? `Claimed (${timeLeft} left to claim)` : '🎁 Claim 1.00 FC')}
             </motion.button>
 
             {/* Captcha Verify Modal */}
