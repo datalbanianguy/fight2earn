@@ -133,30 +133,45 @@
 }
 
 .user-info h1 {
+  /* Reset and basics */
+  margin: 0;
   font-family: 'Verdana', sans-serif;
-  font-size: 2rem;
   font-weight: 900;
   color: #fff;
-  /* White for maximum legibility */
   position: relative;
-  z-index: 1;
+  z-index: 10;
+  /* Ensure it's above background, but be careful with overlaps */
 
-  /* Fire and Ice 3D Shadow Effect */
+  /* Flex column for stacking */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+  /* Tight line height for stacked look */
+
+  /* Apply the Fire/Ice effect to the container or spans */
   text-shadow:
-    /* Deep 3D Structure */
     1px 1px 0 #000,
     2px 2px 0 #000,
     3px 3px 0 #000,
-
-    /* Red Fire Glow (Right/Bottom) */
     4px 4px 10px rgba(255, 69, 0, 0.8),
     0 0 20px rgba(255, 0, 0, 0.6),
-
-    /* Blue Ice/Lightning Glow (Left/Top) */
     -2px -2px 10px rgba(0, 191, 255, 0.8),
     0 0 20px rgba(0, 0, 255, 0.6);
-
   animation: float 3s ease-in-out infinite;
+}
+
+.stacked-title span:first-child {
+  font-size: 1.8rem;
+  /* Slightly smaller to fit */
+  letter-spacing: 2px;
+}
+
+.arena-subtext {
+  font-size: 1.4rem;
+  letter-spacing: 6px;
+  /* Spread out ARENA */
+  margin-top: 5px;
 }
 
 @keyframes float {

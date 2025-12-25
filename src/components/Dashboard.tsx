@@ -24,7 +24,10 @@ const Dashboard: React.FC = () => {
                 </div>
 
                 <div className="user-info centered-title">
-                    <h1>FightCoin Arena</h1>
+                    <h1 className="stacked-title">
+                        <span>FIGHTCOIN</span>
+                        <span className="arena-subtext">ARENA</span>
+                    </h1>
                     <p>Welcome, <span className="username">{user?.username || 'Fighter'}</span></p>
                 </div>
 
