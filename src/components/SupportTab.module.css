@@ -1,0 +1,154 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.header p {
+    font-size: 14px;
+    color: #888;
+}
+
+.form {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.typeSelector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.typeSelector button {
+    flex: 1;
+    padding: 12px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #aaa;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.typeSelector button.active {
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    color: #000;
+    border-color: #00ff9d;
+    font-weight: 600;
+}
+
+.textarea {
+    width: 100%;
+    padding: 15px;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #00ff9d;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.submitBtn:hover {
+    transform: scale(1.02);
+}
+
+.submitBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.successMessage {
+    text-align: center;
+    padding: 40px 20px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #00ff9d;
+}
+
+.checkmark {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00ff9d, #00cc7a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.successMessage h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.successMessage p {
+    color: #888;
+    font-size: 14px;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    border-left: 3px solid #00ff9d;
+}
+
+.info p {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+}
+
+.info strong {
+    color: #00ff9d;
+}

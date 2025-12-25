@@ -36,6 +36,15 @@
   margin-bottom: 10px;
 }
 
+.gameLogo {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .info h3 {
   margin: 0;
   font-size: 1rem;

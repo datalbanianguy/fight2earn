@@ -11,13 +11,14 @@ interface MatchmakingModalProps {
     onMatchFound: (matchId: string) => void;
 }
 
-type Step = 'mode' | 'currency' | 'bet' | 'searching';
+type Step = 'mode' | 'currency' | 'region' | 'bet' | 'searching';
 
 const MatchmakingModal: React.FC<MatchmakingModalProps> = ({ gameId, onClose, onMatchFound }) => {
     const { user } = useAuth();
     const [step, setStep] = useState<Step>('mode');
     const [mode, setMode] = useState<'1v1' | '5v5' | null>(null);
     const [currency, setCurrency] = useState<'USDT' | 'FC' | null>(null);
+    const [region, setRegion] = useState<string>('Global');
     const [bet, setBet] = useState<number | null>(null);
     const [status, setStatus] = useState('Finding match...');
 
@@ -55,17 +56,19 @@ const MatchmakingModal: React.FC<MatchmakingModalProps> = ({ gameId, onClose, on
 
     const handleFindMatch = async (selectedBet: number) => {
         setBet(selectedBet);
-        handleNext('searching');
 
         if (!user || !mode || !currency) return;
 
-        // Simple Region Detection
-        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        let region = 'Global';
-        if (timeZone.startsWith('Europe')) region = 'Europe';
-        else if (timeZone.startsWith('America')) region = 'North America';
-        else if (timeZone.startsWith('Asia')) region = 'Asia';
-        else if (timeZone.startsWith('Africa')) region = 'Africa';
+        // Check if user has sufficient balance
+        const userBalance = currency === 'USDT' ? user.balance_usdt : user.balance_fc;
+
+        if (!userBalance || userBalance < selectedBet) {
+            WebApp.HapticFeedback.notificationOccurred('error');
+            alert(`Insufficient ${currency} balance!\n\nYour balance: ${userBalance?.toFixed(currency === 'USDT' ? 2 : 4) || '0'} ${currency}\nRequired: ${selectedBet} ${currency}\n\nPlease deposit or select a lower bet amount.`);
+            return;
+        }
+
+        handleNext('searching');
 
         try {
             const { data, error } = await supabase.rpc('join_queue', {
@@ -128,8 +131,22 @@ const MatchmakingModal: React.FC<MatchmakingModalProps> = ({ gameId, onClose, on
                         <motion.div key="currency" initial={{ x: 20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -20, opacity: 0 }}>
                             <h3>Select Currency</h3>
                             <div className={styles.options}>
-                                <button onClick={() => { setCurrency('USDT'); handleNext('bet'); }}>USDT</button>
-                                <button onClick={() => { setCurrency('FC'); handleNext('bet'); }}>FightCoin</button>
+                                <button onClick={() => { setCurrency('USDT'); handleNext('region'); }}>USDT</button>
+                                <button onClick={() => { setCurrency('FC'); handleNext('region'); }}>FightCoin</button>
+                            </div>
+                        </motion.div>
+                    )}
+
+                    {step === 'region' && (
+                        <motion.div key="region" initial={{ x: 20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -20, opacity: 0 }}>
+                            <h3>Select Region</h3>
+                            <p style={{ fontSize: '12px', color: '#888', marginBottom: '15px' }}>Choose your region for faster matchmaking</p>
+                            <div className={styles.options}>
+                                <button onClick={() => { setRegion('Europe'); handleNext('bet'); }}>🇪🇺 Europe</button>
+                                <button onClick={() => { setRegion('North America'); handleNext('bet'); }}>🇺🇸 North America</button>
+                                <button onClick={() => { setRegion('Asia'); handleNext('bet'); }}>🌏 Asia</button>
+                                <button onClick={() => { setRegion('Africa'); handleNext('bet'); }}>🌍 Africa</button>
+                                <button onClick={() => { setRegion('Global'); handleNext('bet'); }} style={{ background: '#555' }}>🌐 Global (Faster)</button>
                             </div>
                         </motion.div>
                     )}

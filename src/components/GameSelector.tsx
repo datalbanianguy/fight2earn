@@ -6,9 +6,9 @@ import styles from './GameSelector.module.css';
 import MatchmakingModal from './MatchmakingModal';
 
 const games = [
-    { id: 'wild_rift', name: 'Wild Rift', players: '5v5', icon: '⚔️', color: 'linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb)' },
-    { id: 'brawl_stars', name: 'Brawl Stars', players: '3v3', icon: '⭐', color: 'linear-gradient(135deg, #ff0844, #ffb199)' },
-    { id: 'cs2', name: 'CS2', players: '5v5', icon: '🔫', color: 'linear-gradient(135deg, #f6d365, #fda085)' },
+    { id: 'wild_rift', name: 'Wild Rift', players: '5v5', icon: '⚔️', image: '/wild-rift-logo.png', color: 'linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb)' },
+    { id: 'brawl_stars', name: 'Brawl Stars', players: '3v3', icon: '⭐', image: null, color: 'linear-gradient(135deg, #ff0844, #ffb199)' },
+    { id: 'cs2', name: 'CS2', players: '5v5', icon: '🔫', image: null, color: 'linear-gradient(135deg, #f6d365, #fda085)' },
 ];
 
 const GameSelector: React.FC = () => {
@@ -39,7 +39,11 @@ const GameSelector: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ type: 'spring', stiffness: 300 }}
                         >
-                            <div className={styles.icon}>{game.icon}</div>
+                            {game.image ? (
+                                <img src={game.image} alt={game.name} className={styles.gameLogo} />
+                            ) : (
+                                <div className={styles.icon}>{game.icon}</div>
+                            )}
                             <div className={styles.info}>
                                 <h3>{game.name}</h3>
                                 <p>{game.players}</p>

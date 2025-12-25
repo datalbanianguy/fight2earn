@@ -100,13 +100,25 @@ const GameLobby: React.FC = () => {
     const sendMessage = async () => {
         if (!newMessage.trim() || !user) return;
 
-        await supabase.from('match_messages').insert({
-            match_id: matchId,
-            user_id: user.telegram_id,
-            username: user.username,
-            message: newMessage.trim()
-        });
-        setNewMessage('');
+        try {
+            const { error } = await supabase.from('match_messages').insert({
+                match_id: matchId,
+                user_id: user.telegram_id,
+                username: user.username,
+                message: newMessage.trim()
+            });
+
+            if (error) {
+                console.error('Error sending message:', error);
+                alert('Failed to send message. Please try again.');
+                return;
+            }
+
+            setNewMessage('');
+        } catch (err) {
+            console.error('Chat error:', err);
+            alert('Failed to send message. Please try again.');
+        }
     };
 
     const submitCode = async () => {

@@ -34,3 +34,6 @@ lerna-debug.log*
 .system_generated
 
 .vercel
+
+# Local Netlify folder
+.netlify

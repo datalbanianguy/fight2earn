@@ -6,6 +6,7 @@ import Admin from './components/Admin';
 import Profile from './components/Profile';
 import FriendsDashboard from './components/FriendsDashboard';
 import GameLobby from './components/GameLobby';
+import SupportTab from './components/SupportTab';
 import WebApp from '@twa-dev/sdk';
 import './App.css';
 
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/admin" element={<Admin />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/friends" element={<FriendsDashboard />} />
+          <Route path="/support" element={<SupportTab />} />
           <Route path="/lobby/:matchId" element={<GameLobby />} />
         </Routes>
       </AuthProvider>

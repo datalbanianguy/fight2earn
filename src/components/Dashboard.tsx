@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import GameSelector from './GameSelector';
 import Faucet from './Faucet';
 import DepositModal from './DepositModal';
+import LoadingScreen from './LoadingScreen';
 import '../App.css'; // Verify path or move styles
 
 const Dashboard: React.FC = () => {
@@ -10,20 +11,20 @@ const Dashboard: React.FC = () => {
     const [showDeposit, setShowDeposit] = useState(false);
 
     if (loading) {
-        return (
-            <div className="skeleton-loader">
-                <div className="skeleton-header"></div>
-                <div className="skeleton-grid"></div>
-            </div>
-        );
+        return <LoadingScreen />;
     }
 
     return (
         <div className="app-container">
             <header className="app-header">
-                <div className="user-info">
-                    <h1>FightCoin Arena</h1>
-                    <p>Welcome, <span className="username">{user?.username || 'Fighter'}</span></p>
+                <div className="header-left">
+                    <div className="logo-container">
+                        <img src="/fight-coin-logo.jpg" alt="Logo" className="dashboard-logo" />
+                    </div>
+                    <div className="user-info">
+                        <h1>FightCoin Arena</h1>
+                        <p>Welcome, <span className="username">{user?.username || 'Fighter'}</span></p>
+                    </div>
                 </div>
                 <div className="balance-info">
                     <div className="balance-item">
@@ -41,7 +42,7 @@ const Dashboard: React.FC = () => {
             <main>
                 <Faucet />
 
-                <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '20px' }}>
+                <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginTop: '20px' }}>
                     <button className="nav-btn" onClick={() => window.location.href = '/profile'} style={{
                         background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
                     }}>
@@ -51,6 +52,11 @@ const Dashboard: React.FC = () => {
                         background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
                     }}>
                         👥 Friends
+                    </button>
+                    <button className="nav-btn" onClick={() => window.location.href = '/support'} style={{
+                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+                    }}>
+                        📩 Support
                     </button>
                 </div>
 

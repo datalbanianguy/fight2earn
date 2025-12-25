@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS matchmaking_queue (
     mode TEXT, -- '1v1', '5v5'
     currency TEXT, -- 'USDT', 'FC'
     bet_amount DECIMAL(18, 8),
+    region TEXT DEFAULT 'Global',
     joined_at TIMESTAMP DEFAULT NOW(),
     PRIMARY KEY (user_id)
 );
@@ -26,7 +27,8 @@ CREATE OR REPLACE FUNCTION join_queue(
     p_game_type TEXT,
     p_mode TEXT,
     p_currency TEXT,
-    p_bet_amount DECIMAL
+    p_bet_amount DECIMAL,
+    p_region TEXT DEFAULT 'Global'
 )
 RETURNS JSONB AS $$
 DECLARE
@@ -48,22 +50,24 @@ BEGIN
     END IF;
 
     -- Upsert into Queue
-    INSERT INTO matchmaking_queue (user_id, game_type, mode, currency, bet_amount)
-    VALUES (p_user_id, p_game_type, p_mode, p_currency, p_bet_amount)
+    INSERT INTO matchmaking_queue (user_id, game_type, mode, currency, bet_amount, region)
+    VALUES (p_user_id, p_game_type, p_mode, p_currency, p_bet_amount, p_region)
     ON CONFLICT (user_id) DO UPDATE
     SET game_type = EXCLUDED.game_type,
         mode = EXCLUDED.mode,
         currency = EXCLUDED.currency,
         bet_amount = EXCLUDED.bet_amount,
+        region = EXCLUDED.region,
         joined_at = NOW();
 
-    -- Check Queue Size for this specific pool
+    -- Check Queue Size for this specific pool (prioritize same region)
     SELECT COUNT(*) INTO queue_count
     FROM matchmaking_queue
     WHERE game_type = p_game_type 
       AND mode = p_mode 
       AND currency = p_currency 
-      AND bet_amount = p_bet_amount;
+      AND bet_amount = p_bet_amount
+      AND (region = p_region OR p_region = 'Global');
 
     -- If we have enough players, MATCHMAKE!
     IF queue_count >= required_players THEN
@@ -74,7 +78,7 @@ BEGIN
         RETURNING id INTO new_match_id;
 
         -- Select Players ordered by Total Winnings (High to Low) for balancing
-        -- We use ARRAY_AGG to handle them in a loop
+        -- Prioritize same region, fallback to global
         SELECT ARRAY(
             SELECT row_to_json(mq)
             FROM (
@@ -85,7 +89,10 @@ BEGIN
                   AND mq.mode = p_mode 
                   AND mq.currency = p_currency 
                   AND mq.bet_amount = p_bet_amount
-                ORDER BY u.total_winnings DESC
+                  AND (mq.region = p_region OR p_region = 'Global')
+                ORDER BY 
+                    CASE WHEN mq.region = p_region THEN 0 ELSE 1 END,
+                    u.total_winnings DESC
                 LIMIT required_players
             ) mq
         ) INTO players_list;

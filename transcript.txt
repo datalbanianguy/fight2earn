@@ -58,3 +58,1280 @@ At line:1 char:1
   xception
 
 ]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>& "C:\Program Files\Git\cmd\git.exe" push origin main
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>& "C:\Program Files\Git\cmd\git.exe" push origin main --force
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npm run build
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx wrangler pages deploy dist --project-name f2earnbot
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx wrangler login
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx wrangler login > auth_output.txt 2>&1
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+>> ParameterBinding(Out-File): name="InputObject"; value=" Γ¢à∩╕Å wrangler 4.54.0"
+>> ParameterBinding(Out-File): name="InputObject"; value="ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ"
+>> ParameterBinding(Out-File): name="InputObject"; value="Attempting to login via OAuth..."
+>> ParameterBinding(Out-File): name="InputObject"; value="Opening a link in your default browser: https://dash.cloudflare.com/oauth2/auth?response_type=code&client_id=54d11594-84e4-41aa-b438-e81b8fa78ee7&redirect_uri=http%3A%2F%2Flocalhost%3A8976%2Foauth%2Fcallback&scope=account%3Aread%20user%3Aread%20workers%3Awrite%20workers_kv%3Awrite%20workers_routes%3Awrite%20workers_scripts%3Awrite%20workers_tail%3Aread%20d1%3Awrite%20pages%3Awrite%20zone%3Aread%20ssl_certs%3Awrite%20ai%3Awrite%20queues%3Awrite%20pipelines%3Awrite%20secrets_store%3Awrite%20containers%3Awrite%20cloudchamber%3Awrite%20connectivity%3Aadmin%20offline_access&state=JfyXBMV9algPr9edrzxCt0piMuP65W6L&code_challenge=7IqiD0Cll3Gvt_CQxXqkm3sPB73drSXsUbF69UPPtAU&code_challenge_method=S256"
+>> ParameterBinding(Out-File): name="InputObject"; value=""
+node.exe : [31mX [41;31m[[41;97mERROR[41;31m][0m [1mTimed out waiting for authorization code, please try 
+again.[0m
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\PC\AppData\Roaming\npm ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31mX [41;31m... try again.[0m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+>> ParameterBinding(Out-File): name="InputObject"; value="[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTimed out waiting for authorization code, please try again.[0m"
+
+>> ParameterBinding(Out-File): name="InputObject"; value="System.Management.Automation.RemoteException"
+
+>> ParameterBinding(Out-File): name="InputObject"; value="System.Management.Automation.RemoteException"
+≡ƒ¬╡  Logs were written to "C:\Users\PC\AppData\Roaming\xdg.config\.wrangler\logs\wrangler-2025-12-24_21-12-21_683.log"
+>> ParameterBinding(Out-File): name="InputObject"; value="≡ƒ¬╡  Logs were written to "C:\Users\PC\AppData\Roaming\xdg.config\.wrangler\logs\wrangler-2025-12-24_21-12-21_683.log""
+Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76
+>> ParameterBinding(Out-File): name="InputObject"; value="Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 76"
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify-cli deploy --prod --dir=dist --site=f2earnbot
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify deploy --prod --dir=dist
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify sites:create --name f2earnbot
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify deploy --prod --dir=dist
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify status
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify status --verbose
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>curl -X POST "https://api.telegram.org/bot8504028805:AAFG1jMrUbLsw3Z6248UxqfY_r0sGpRe7YA/setChatMenuButton" -H "Content-Type: application/json" -d '{\"menu_button\":{\"type\":\"web_app\",\"text\":\"Play FightCoin Arena\",\"web_app\":{\"url\":\"https://f2earnbot.netlify.app\"}}}'
+>> TerminatingError(Invoke-WebRequest): "Cannot bind parameter 'Headers'. Cannot convert the "Content-Type: application/json" value of type "System.String" to type "System.Collections.IDictionary"."
+Invoke-WebRequest : Cannot bind parameter 'Headers'. Cannot convert the "Content-Type: application/json" value of type 
+"System.String" to type "System.Collections.IDictionary".
+At line:1 char:112
++ ... pRe7YA/setChatMenuButton" -H "Content-Type: application/json" -d '{\" ...
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Invoke-WebRequest], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest :
+Cannot bind
+parameter 'Headers'.
+Cannot convert the
+"Content-Type:
+application/json"
+value of type
+"System.String" to
+type "System.Collecti
+ons.IDictionary".
+At line:1 char:112
++ ... pRe7YA/setChatM
+enuButton" -H
+"Content-Type:
+application/json" -d
+'{\" ...
++
+              ~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo
+           : Invali
+  dArgument: (:) [
+ Invoke-WebReques
+t], ParameterBin
+dingException
+    + FullyQualified
+   ErrorId : Cannot
+  ConvertArgumentN
+ oMessage,Microso
+ft.PowerShell.Co
+mmands.InvokeWeb
+RequestCommand
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>Invoke-WebRequest -Uri "https://api.telegram.org/bot8504028805:AAFG1jMrUbLsw3Z6248UxqfY_r0sGpRe7YA/setChatMenuButton" -Method POST -ContentType "application/json" -Body '{"menu_button":{"type":"web_app","text":"Play FightCoin Arena","web_app":{"url":"https://f2earnbot.netlify.app"}}}'
+Security Warning: Script Execution Risk
+Invoke-WebRequest parses the content of the web page. Script code in the web page might be run when the page is parsed.
+      RECOMMENDED ACTION:
+      Use the -UseBasicParsing switch to avoid script code execution.
+
+      Do you want to continue?
+&Yes  Yes to &All  &No  No to A&ll  &Suspend
+A
+
+
+StatusCode        : 2
+                    0
+                    0
+StatusDescription : O
+                    K
+Content           : {
+                    "
+                    o
+                    k
+                    "
+                    :
+                    t
+                    r
+                    u
+                    e
+                    ,
+                    "
+                    r
+                    e
+                    s
+                    u
+                    l
+                    t
+                    "
+                    :
+                    t
+                    r
+                    u
+                    e
+                    }
+RawContent        : H
+                    T
+                    T
+                    P
+                    /
+                    1
+                    .
+                    1
+
+                    2
+                    0
+                    0
+
+                    O
+                    K
+                    C
+                    o
+                    n
+                    n
+                    e
+                    c
+                    t
+                    i
+                    o
+                    n
+                    :
+
+                    k
+                    e
+                    e
+                    p
+                    -
+                    a
+                    l
+                    i
+                    v
+                    e
+                    S
+                    t
+                    r
+                    i
+                    c
+                    t
+                    -
+                    T
+                    r
+                    a
+                    n
+                    s
+                    p
+                    o
+                    r
+                    t
+                    -
+                    S
+                    e
+                    c
+                    u
+                    r
+                    i
+                    t
+                    y
+                    :
+
+                    m
+                    a
+                    x
+                    -
+                    a
+                    g
+                    e
+                    =
+                    3
+                    1
+                    5
+                    3
+                    6
+                    0
+                    0
+                    0
+                    ;
+
+                    i
+                    n
+                    c
+                    l
+                    u
+                    d
+                    e
+                    S
+                    u
+                    b
+                    D
+                    o
+                    m
+                    a
+                    i
+                    n
+                    s
+                    ;
+
+                    p
+                    r
+                    e
+                    l
+                    o
+                    a
+                    d
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    O
+                    r
+                    i
+                    g
+                    i
+                    n
+                    :
+
+                    *
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    M
+                    e
+                    t
+                    h
+                    o
+                    d
+                    s
+                    :
+
+                    G
+                    E
+                    T
+                    ,
+
+                    P
+                    O
+                    S
+                    T
+                    ,
+
+                    O
+                    P
+                    T
+                    I
+                    O
+                    N
+                    S
+                    A
+                    c
+                    c
+                    e
+                    .
+                    .
+                    .
+Forms             : {
+                    }
+Headers           : {
+                    [
+                    C
+                    o
+                    n
+                    n
+                    e
+                    c
+                    t
+                    i
+                    o
+                    n
+                    ,
+
+                    k
+                    e
+                    e
+                    p
+                    -
+                    a
+                    l
+                    i
+                    v
+                    e
+                    ]
+                    ,
+
+                    [
+                    S
+                    t
+                    r
+                    i
+                    c
+                    t
+                    -
+                    T
+                    r
+                    a
+                    n
+                    s
+                    p
+                    o
+                    r
+                    t
+                    -
+                    S
+                    e
+                    c
+                    u
+                    r
+                    i
+                    t
+                    y
+                    ,
+
+                    m
+                    a
+                    x
+                    -
+                    a
+                    g
+                    e
+                    =
+                    3
+                    1
+                    5
+                    3
+                    6
+                    0
+                    0
+                    0
+                    ;
+
+                    i
+                    n
+                    c
+                    l
+                    u
+                    d
+                    e
+                    S
+                    u
+                    b
+                    D
+                    o
+                    m
+                    a
+                    i
+                    n
+                    s
+                    ;
+
+                    p
+                    r
+                    e
+                    l
+                    o
+                    a
+                    d
+                    ]
+                    ,
+
+                    [
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    O
+                    r
+                    i
+                    g
+                    i
+                    n
+                    ,
+
+                    *
+                    ]
+                    ,
+
+                    [
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    M
+                    e
+                    t
+                    h
+                    o
+                    d
+                    s
+                    ,
+
+                    G
+                    E
+                    T
+                    ,
+
+                    P
+                    O
+                    S
+                    T
+                    ,
+
+                    O
+                    P
+                    T
+                    I
+                    O
+                    N
+                    S
+                    ]
+                    .
+                    .
+                    .
+                    }
+Images            : {
+                    }
+InputFields       : {
+                    }
+Links             : {
+                    }
+ParsedHtml        : m
+                    s
+                    h
+                    t
+                    m
+                    l
+                    .
+                    H
+                    T
+                    M
+                    L
+                    D
+                    o
+                    c
+                    u
+                    m
+                    e
+                    n
+                    t
+                    C
+                    l
+                    a
+                    s
+                    s
+RawContentLength  : 2
+                    5
+
+
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>Invoke-WebRequest -Uri "https://api.telegram.org/bot8504028805:AAFG1jMrUbLsw3Z6248UxqfY_r0sGpRe7YA/getMe" -Method GET
+
+
+StatusCode        : 2
+                    0
+                    0
+StatusDescription : O
+                    K
+Content           : {
+                    "
+                    o
+                    k
+                    "
+                    :
+                    t
+                    r
+                    u
+                    e
+                    ,
+                    "
+                    r
+                    e
+                    s
+                    u
+                    l
+                    t
+                    "
+                    :
+                    {
+                    "
+                    i
+                    d
+                    "
+                    :
+                    8
+                    5
+                    0
+                    4
+                    0
+                    2
+                    8
+                    8
+                    0
+                    5
+                    ,
+                    "
+                    i
+                    s
+                    _
+                    b
+                    o
+                    t
+                    "
+                    :
+                    t
+                    r
+                    u
+                    e
+                    ,
+                    "
+                    f
+                    i
+                    r
+                    s
+                    t
+                    _
+                    n
+                    a
+                    m
+                    e
+                    "
+                    :
+                    "
+                    f
+                    2
+                    e
+                    a
+                    r
+                    n
+                    "
+                    ,
+                    "
+                    u
+                    s
+                    e
+                    r
+                    n
+                    a
+                    m
+                    e
+                    "
+                    :
+                    "
+                    f
+                    2
+                    e
+                    a
+                    r
+                    n
+                    _
+                    b
+                    o
+                    t
+                    "
+                    ,
+                    "
+                    c
+                    a
+                    n
+                    _
+                    j
+                    o
+                    i
+                    n
+                    _
+                    g
+                    r
+                    o
+                    u
+                    p
+                    s
+                    "
+                    :
+                    t
+                    r
+                    u
+                    e
+                    ,
+                    "
+                    c
+                    a
+                    n
+                    _
+                    r
+                    e
+                    a
+                    d
+                    _
+                    a
+                    l
+                    l
+                    _
+                    g
+                    r
+                    o
+                    u
+                    p
+                    _
+                    m
+                    e
+                    s
+                    s
+                    a
+                    g
+                    e
+                    s
+                    "
+                    :
+                    f
+                    a
+                    l
+                    s
+                    e
+                    ,
+                    "
+                    s
+                    u
+                    p
+                    p
+                    o
+                    r
+                    t
+                    s
+                    _
+                    i
+                    n
+                    l
+                    i
+                    n
+                    e
+                    _
+                    q
+                    u
+                    e
+                    r
+                    i
+                    e
+                    s
+                    "
+                    :
+                    f
+                    a
+                    l
+                    s
+                    e
+                    ,
+                    "
+                    c
+                    a
+                    n
+                    _
+                    c
+                    o
+                    n
+                    n
+                    e
+                    c
+                    t
+                    .
+                    .
+                    .
+RawContent        : H
+                    T
+                    T
+                    P
+                    /
+                    1
+                    .
+                    1
+
+                    2
+                    0
+                    0
+
+                    O
+                    K
+                    C
+                    o
+                    n
+                    n
+                    e
+                    c
+                    t
+                    i
+                    o
+                    n
+                    :
+
+                    k
+                    e
+                    e
+                    p
+                    -
+                    a
+                    l
+                    i
+                    v
+                    e
+                    S
+                    t
+                    r
+                    i
+                    c
+                    t
+                    -
+                    T
+                    r
+                    a
+                    n
+                    s
+                    p
+                    o
+                    r
+                    t
+                    -
+                    S
+                    e
+                    c
+                    u
+                    r
+                    i
+                    t
+                    y
+                    :
+
+                    m
+                    a
+                    x
+                    -
+                    a
+                    g
+                    e
+                    =
+                    3
+                    1
+                    5
+                    3
+                    6
+                    0
+                    0
+                    0
+                    ;
+
+                    i
+                    n
+                    c
+                    l
+                    u
+                    d
+                    e
+                    S
+                    u
+                    b
+                    D
+                    o
+                    m
+                    a
+                    i
+                    n
+                    s
+                    ;
+
+                    p
+                    r
+                    e
+                    l
+                    o
+                    a
+                    d
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    O
+                    r
+                    i
+                    g
+                    i
+                    n
+                    :
+
+                    *
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    M
+                    e
+                    t
+                    h
+                    o
+                    d
+                    s
+                    :
+
+                    G
+                    E
+                    T
+                    ,
+
+                    P
+                    O
+                    S
+                    T
+                    ,
+
+                    O
+                    P
+                    T
+                    I
+                    O
+                    N
+                    S
+                    A
+                    c
+                    c
+                    e
+                    .
+                    .
+                    .
+Forms             : {
+                    }
+Headers           : {
+                    [
+                    C
+                    o
+                    n
+                    n
+                    e
+                    c
+                    t
+                    i
+                    o
+                    n
+                    ,
+
+                    k
+                    e
+                    e
+                    p
+                    -
+                    a
+                    l
+                    i
+                    v
+                    e
+                    ]
+                    ,
+
+                    [
+                    S
+                    t
+                    r
+                    i
+                    c
+                    t
+                    -
+                    T
+                    r
+                    a
+                    n
+                    s
+                    p
+                    o
+                    r
+                    t
+                    -
+                    S
+                    e
+                    c
+                    u
+                    r
+                    i
+                    t
+                    y
+                    ,
+
+                    m
+                    a
+                    x
+                    -
+                    a
+                    g
+                    e
+                    =
+                    3
+                    1
+                    5
+                    3
+                    6
+                    0
+                    0
+                    0
+                    ;
+
+                    i
+                    n
+                    c
+                    l
+                    u
+                    d
+                    e
+                    S
+                    u
+                    b
+                    D
+                    o
+                    m
+                    a
+                    i
+                    n
+                    s
+                    ;
+
+                    p
+                    r
+                    e
+                    l
+                    o
+                    a
+                    d
+                    ]
+                    ,
+
+                    [
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    O
+                    r
+                    i
+                    g
+                    i
+                    n
+                    ,
+
+                    *
+                    ]
+                    ,
+
+                    [
+                    A
+                    c
+                    c
+                    e
+                    s
+                    s
+                    -
+                    C
+                    o
+                    n
+                    t
+                    r
+                    o
+                    l
+                    -
+                    A
+                    l
+                    l
+                    o
+                    w
+                    -
+                    M
+                    e
+                    t
+                    h
+                    o
+                    d
+                    s
+                    ,
+
+                    G
+                    E
+                    T
+                    ,
+
+                    P
+                    O
+                    S
+                    T
+                    ,
+
+                    O
+                    P
+                    T
+                    I
+                    O
+                    N
+                    S
+                    ]
+                    .
+                    .
+                    .
+                    }
+Images            : {
+                    }
+InputFields       : {
+                    }
+Links             : {
+                    }
+ParsedHtml        : m
+                    s
+                    h
+                    t
+                    m
+                    l
+                    .
+                    H
+                    T
+                    M
+                    L
+                    D
+                    o
+                    c
+                    u
+                    m
+                    e
+                    n
+                    t
+                    C
+                    l
+                    a
+                    s
+                    s
+RawContentLength  : 2
+                    4
+                    6
+
+
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npm run build
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify deploy --prod --dir=dist
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npm run build
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npm run build
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify deploy --prod --dir=dist
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>copy "C:\Users\PC\.gemini\antigravity\brain\d3de76a9-6414-4dff-8a9a-cdc8fc24cf51\uploaded_image_1766616748739.png" "c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena\public\wild-rift-logo.png"
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npm run build
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>cd 'c:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
+PS>npx netlify deploy --prod --dir=dist
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cPC\x5c.gemini\x5cantigravity\x5cscratch\x5cfight-coin-arenaPS C:\Users\PC\.gemini\antigravity\scratch\fight-coin-arena> ]633;B
