@@ -33,41 +33,39 @@ const Dashboard: React.FC = () => {
                         <span className="label">USDT</span>
                         <span className="value text-green">${user?.balance_usdt?.toFixed(2) || '0.00'}</span>
                     </div>
-                    <span className="value text-green">${user?.balance_usdt?.toFixed(2) || '0.00'}</span>
+                    <div className="balance-item">
+                        <span className="label">FC</span>
+                        <span className="value text-gold">{user?.balance_fc?.toFixed(4) || '0.0000'}</span>
+                    </div>
+                    <button className="deposit-btn" onClick={() => setShowDeposit(true)}>+ Deposit</button>
                 </div>
-                <div className="balance-item">
-                    <span className="label">FC</span>
-                    <span className="value text-gold">{user?.balance_fc?.toFixed(4) || '0.0000'}</span>
+            </header>
+
+            <main>
+                <Faucet />
+
+                <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginTop: '20px' }}>
+                    <button className="nav-btn" onClick={() => window.location.href = '/profile'} style={{
+                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+                    }}>
+                        👤 Profile
+                    </button>
+                    <button className="nav-btn" onClick={() => window.location.href = '/friends'} style={{
+                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+                    }}>
+                        👥 Friends
+                    </button>
+                    <button className="nav-btn" onClick={() => window.location.href = '/support'} style={{
+                        background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
+                    }}>
+                        📩 Support
+                    </button>
                 </div>
-                <button className="deposit-btn" onClick={() => setShowDeposit(true)}>+ Deposit</button>
-        </div>
-            </header >
 
-    <main>
-        <Faucet />
+                <GameSelector />
+            </main>
 
-        <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', marginTop: '20px' }}>
-            <button className="nav-btn" onClick={() => window.location.href = '/profile'} style={{
-                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-            }}>
-                👤 Profile
-            </button>
-            <button className="nav-btn" onClick={() => window.location.href = '/friends'} style={{
-                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-            }}>
-                👥 Friends
-            </button>
-            <button className="nav-btn" onClick={() => window.location.href = '/support'} style={{
-                background: '#333', border: '1px solid #444', padding: '15px', borderRadius: '12px', color: 'white', fontWeight: 'bold'
-            }}>
-                📩 Support
-            </button>
-        </div>
-
-        <GameSelector />
-    </main>
-
-{ showDeposit && <DepositModal onClose={() => setShowDeposit(false)} /> }
+            {showDeposit && <DepositModal onClose={() => setShowDeposit(false)} />}
         </div >
     );
 };
