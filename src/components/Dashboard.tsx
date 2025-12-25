@@ -69,6 +69,10 @@ const Dashboard: React.FC = () => {
             </main>
 
             {showDeposit && <DepositModal onClose={() => setShowDeposit(false)} />}
+
+            <div style={{ textAlign: 'center', padding: '10px', fontSize: '0.8rem', color: '#666' }}>
+                Site Version: v1.2 (Netlify Configured)
+            </div>
         </div >
     );
 };
