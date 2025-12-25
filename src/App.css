@@ -7,37 +7,39 @@
 }
 
 .app-header {
-  padding: 20px;
   background: var(--card-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
+
+  /* Grid Layout for stability */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
   position: relative;
-  /* For absolute centering of title if needed, but flex play is safer for overlaps */
+  overflow: hidden;
+  /* Contain any glowing spills */
 }
 
 /* Ensure Logo stays left */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 15px;
-  /* Space between logo and text */
   z-index: 2;
-  /* Above title if overlap */
 }
 
-/* Center the Title */
+/* Center the Title relative to the grid cell, effectively centered space */
 .centered-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  /* Removed absolute positioning */
+  position: static;
+  transform: none;
   text-align: center;
   width: 100%;
-  /* catch clicks if safe, or auto */
-  pointer-events: none;
-  /* Let clicks pass through to underneath if necessary */
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  /* Ensure it doesn't get crushed */
+  min-width: 0;
 }
 
 /* Ensure Balance stays right */
@@ -45,28 +47,34 @@
   text-align: right;
   z-index: 2;
   background: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent bg to read text if dragging overlaps */
   padding: 5px;
   border-radius: 8px;
   backdrop-filter: blur(4px);
+  white-space: nowrap;
+  /* Prevent wrapping */
 }
 
 .logo-container {
-  width: 120px;
-  /* Reduced from 200px to prevent layout break */
-  height: 120px;
+  width: 140px;
+  /* Requested larger */
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
+  /* Clean up the border area */
   border: 3px solid var(--accent-color);
   box-shadow: 0 0 15px rgba(0, 255, 127, 0.6);
   flex-shrink: 0;
-  /* Prevent squeezing */
+  position: relative;
+  /* Fix "black background around circle" by ensuring background is transparent/matched */
+  background-color: transparent;
 }
 
 .dashboard-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Slight zoom to crop out any potential black edges from the source image */
+  transform: scale(1.15);
 }
 
 /* Loading Screen Styles */
