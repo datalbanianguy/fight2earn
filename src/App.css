@@ -10,15 +10,18 @@
   background: var(--card-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Grid Layout for stability */
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* Responsive Flex Layout */
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
+  gap: 15px;
+  /* Spacing between wrapped items */
+  padding: 15px;
   position: relative;
-  overflow: hidden;
-  /* Contain any glowing spills */
+  overflow: visible;
+  /* Allow effects to spill */
 }
 
 /* Ensure Logo stays left */
@@ -26,32 +29,63 @@
   display: flex;
   align-items: center;
   z-index: 2;
+  flex: 0 0 auto;
+  /* Don't shrink */
 }
 
-/* Center the Title relative to the grid cell, effectively centered space */
+/* Center the Title */
 .centered-title {
-  /* Removed absolute positioning */
   position: static;
   transform: none;
   text-align: center;
-  width: 100%;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  /* Ensure it doesn't get crushed */
-  min-width: 0;
+  align-items: center;
+  flex: 1 1 auto;
+  /* Take up available space */
+  min-width: 200px;
+  /* Force wrap if too squished */
 }
 
-/* Ensure Balance stays right */
+/* Ensure Balance stays right or wraps to bottom */
 .balance-info {
   text-align: right;
   z-index: 2;
   background: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
   backdrop-filter: blur(4px);
   white-space: nowrap;
-  /* Prevent wrapping */
+
+  /* If wrapped, center it */
+  flex: 0 0 auto;
+  margin-left: auto;
+  /* Push to right if on same line */
+}
+
+/* On very small screens (phones), force stacking order if needed */
+@media (max-width: 480px) {
+  .app-header {
+    justify-content: center;
+    /* Center everything when wrapped */
+  }
+
+  .logo-container {
+    /* On mobile, maybe shrinking slightly is better than breaking layout */
+    /* But user wants BIG. keeping 140px might force wrapping, which is fine. */
+  }
+
+  .balance-info {
+    margin: 0 auto;
+    /* Center balance when wrapped to new line */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+  }
 }
 
 .logo-container {
